@@ -173,7 +173,6 @@ jobs:
           CONFIG_PACKAGE_luci-app-nlbwmon=y
           CONFIG_PACKAGE_luci-app-pptp-server=y
           CONFIG_PACKAGE_luci-app-ramfree=y
-          CONFIG_PACKAGE_luci-app-samba=y
           CONFIG_PACKAGE_luci-app-sqm=y
           CONFIG_PACKAGE_luci-app-ssr-plus=y
           CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks=y
@@ -194,10 +193,10 @@ jobs:
           EOF
 
           # LuCI主题:
-          cat >> .config <<EOF
-          CONFIG_PACKAGE_luci-theme-argon=y
-          CONFIG_PACKAGE_luci-theme-netgear=y
-          EOF
+          # cat >> .config <<EOF
+          # CONFIG_PACKAGE_luci-theme-argon=y
+          # CONFIG_PACKAGE_luci-theme-netgear=y
+          # EOF
 
           # 常用软件包:
           # cat >> .config <<EOF
@@ -212,9 +211,6 @@ jobs:
 
           # 虚拟化:
           cat >> .config <<EOF
-          CONFIG_PACKAGE_kmod-irqbypass=y
-          CONFIG_PACKAGE_kmod-kvm-intel=y
-          CONFIG_PACKAGE_kmod-kvm-x86=y
           CONFIG_PACKAGE_qemu-ga=y
           CONFIG_PACKAGE_qemu-x86_64-softmmu=y
           CONFIG_QEMU_UI_VNC=y
