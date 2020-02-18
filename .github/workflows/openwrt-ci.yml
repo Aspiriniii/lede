@@ -10,9 +10,9 @@
 name: OpenWrt-CI
 
 on:
-#   push:
-#     branches:
-#       - master
+  push:
+    branches:
+      - master
   schedule:
     - cron: 0 20 * * *
   # release:
@@ -110,6 +110,7 @@ jobs:
 
           # 编译UEFI固件:
           cat >> .config <<EOF
+          # CONFIG_GRUB_IMAGES is not set
           CONFIG_EFI_IMAGES=y
           EOF
 
