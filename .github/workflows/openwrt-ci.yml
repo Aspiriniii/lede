@@ -150,7 +150,6 @@ jobs:
 
           # 常用LuCI插件选择:
           cat >> .config <<EOF
-          CONFIG_PACKAGE_luci-app-frpc=y
           CONFIG_PACKAGE_luci-app-frps=y
           CONFIG_PACKAGE_luci-app-ipsec-vpnd=y
           CONFIG_PACKAGE_luci-app-v2ray-server=y
