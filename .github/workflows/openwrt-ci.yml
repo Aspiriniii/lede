@@ -53,9 +53,6 @@ jobs:
           cp ./makeconfig.d/x86_64.config ./.config
           make defconfig
 
-      - name: Generate configuration file
-        run: make defconfig
-
       - name: Make download
         run: |
           make download -j8
